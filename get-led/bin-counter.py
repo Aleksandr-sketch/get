@@ -19,7 +19,6 @@ while True:
         if num > 255:
             num = 0
         print(num, dec2bin(num))
-        time.sleep(sleep_time)
     if GPIO.input(button2):
         num = num - 1
         if num < 0:
