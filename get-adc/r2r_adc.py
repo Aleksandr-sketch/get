@@ -44,7 +44,7 @@ class R2R_ADC:
         while (high - low) > 1:
             value = (high + low) // 2
             self.number_to_dac(value)
-            time.sleep(0.01)
+            time.sleep(0.0001)
             if GPIO.input(self.comp_gpio) == 1:
                 high = value
             else:
