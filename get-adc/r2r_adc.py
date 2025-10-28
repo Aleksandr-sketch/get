@@ -26,7 +26,7 @@ class R2R_ADC:
     def sequential_counting_adc(self):
         for dac_value in range(256):
             self.number_to_dac(dac_value)
-            time.sleep(0.01)
+            time.sleep(0.0001)
             comparator_output = GPIO.input(self.comp_gpio)
             if comparator_output == 1:
                 return dac_value
